@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plagiarism Checker</title>
+    <link rel="stylesheet" href="C:\Users\satya\Desktop\Pytjon\templates\styles.css">
+</head>
+<style>
+/* styles.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #edd9d9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+@media only screen and (max-width: 600px) {
+  textarea {
+      grid-row: 10;
+  }
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Plagiarism Checker</h1>
+        <form method="post" action="{{ url_for('result') }}">
+
+            <label for="text1">Text 1:</label>
+            <textarea id="text1" name="text1"></textarea><br>
+
+            <label for="text2">Text 2:</label>
+            <textarea id="text2" name="text2"></textarea><br>
+
+            <button type="submit">Check Plagiarism</button>
+        </form>
+    </div>
+</body>
+
+</html>
